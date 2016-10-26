@@ -1,0 +1,37 @@
+
+package webservice.jaxws;
+
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name = "listeAllComptesResponse", namespace = "http://webservice/")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "listeAllComptesResponse", namespace = "http://webservice/")
+public class GetComptesResponse {
+
+    @XmlElement(name = "return", namespace = "")
+    private List<webservice.Compte> _return;
+
+    /**
+     * 
+     * @return
+     *     returns List<Compte>
+     */
+    public List<webservice.Compte> getReturn() {
+        return this._return;
+    }
+
+    /**
+     * 
+     * @param _return
+     *     the value for the _return property
+     */
+    public void setReturn(List<webservice.Compte> _return) {
+        this._return = _return;
+    }
+
+}

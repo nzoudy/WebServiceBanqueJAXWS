@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservice/" xmlns:tns="http://webservice/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="conversionEuroFcfa" type="tns:conversionEuroFcfa"/>
+
+  <xs:element name="conversionEuroFcfaResponse" type="tns:conversionEuroFcfaResponse"/>
+
+  <xs:element name="getCompte" type="tns:getCompte"/>
+
+  <xs:element name="getCompteResponse" type="tns:getCompteResponse"/>
+
+  <xs:element name="listeAllComptes" type="tns:listeAllComptes"/>
+
+  <xs:element name="listeAllComptesResponse" type="tns:listeAllComptesResponse"/>
+
+  <xs:element name="test" type="tns:test"/>
+
+  <xs:element name="testResponse" type="tns:testResponse"/>
+
+  <xs:complexType name="conversionEuroFcfa">
+    <xs:sequence>
+      <xs:element name="montant" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="conversionEuroFcfaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listeAllComptes">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="listeAllComptesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:compte" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="compte">
+    <xs:sequence>
+      <xs:element name="code" type="xs:int"/>
+      <xs:element name="solde" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="test">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="testResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCompte">
+    <xs:sequence>
+      <xs:element name="code" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCompteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:compte" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

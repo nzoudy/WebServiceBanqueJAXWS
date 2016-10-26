@@ -1,0 +1,3 @@
+To generate wsdl by command line
+
+wsgen -s . -wsdl -cp ../bin webservice.BanqueService
