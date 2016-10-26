@@ -3,6 +3,7 @@ package webservice;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
@@ -21,17 +22,17 @@ public class BanqueService {
 	}
 	
 	@WebMethod
-	public Compte getCompte(@WebParam(name="code") int code){
-		return new Compte(code, Math.random()*8000);
+	public Account getCompte(@WebParam(name="code") int code){
+		return new Account(code, Math.random()*8000);
 	}
 	
 	@WebMethod(operationName="listeAllComptes")
-	public List<Compte> getComptes(){
-		List<Compte> cptes = new ArrayList<Compte>();
-		cptes.add(new Compte(1, Math.random()*8000));
-		cptes.add(new Compte(2, Math.random()*8000));
-		cptes.add(new Compte(3, Math.random()*8000));
-		cptes.add(new Compte(4, Math.random()*8000));
+	public List<Account> getComptes(){
+		List<Account> cptes = new ArrayList<Account>();
+		cptes.add(new Account(1, Math.random()*8000));
+		cptes.add(new Account(2, Math.random()*8000));
+		cptes.add(new Account(3, Math.random()*8000));
+		cptes.add(new Account(4, Math.random()*8000));
 		return cptes;
 	}
 }

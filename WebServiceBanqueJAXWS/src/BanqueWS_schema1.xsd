@@ -35,11 +35,11 @@
 
   <xs:complexType name="listeAllComptesResponse">
     <xs:sequence>
-      <xs:element name="return" type="tns:compte" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="return" type="tns:account" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="compte">
+  <xs:complexType name="account">
     <xs:sequence>
       <xs:element name="code" type="xs:int"/>
       <xs:element name="solde" type="xs:double"/>
@@ -64,7 +64,7 @@
 
   <xs:complexType name="getCompteResponse">
     <xs:sequence>
-      <xs:element name="return" type="tns:compte" minOccurs="0"/>
+      <xs:element name="return" type="tns:account" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

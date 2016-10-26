@@ -1,16 +1,16 @@
-package entities;
+package webservice;
 
 import java.io.Serializable;
 
-public class Compte implements Serializable {
+public class Account implements Serializable {
 
 	private int code;
 	private double solde;
-	public Compte() {
+	public Account() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Compte(int code, double solde) {
+	public Account(int code, double solde) {
 		super();
 		this.code = code;
 		this.solde = solde;

@@ -14,14 +14,14 @@ import javax.xml.bind.annotation.XmlType;
 public class GetComptesResponse {
 
     @XmlElement(name = "return", namespace = "")
-    private List<webservice.Compte> _return;
+    private List<webservice.Account> _return;
 
     /**
      * 
      * @return
-     *     returns List<Compte>
+     *     returns List<Account>
      */
-    public List<webservice.Compte> getReturn() {
+    public List<webservice.Account> getReturn() {
         return this._return;
     }
 
@@ -30,7 +30,7 @@ public class GetComptesResponse {
      * @param _return
      *     the value for the _return property
      */
-    public void setReturn(List<webservice.Compte> _return) {
+    public void setReturn(List<webservice.Account> _return) {
         this._return = _return;
     }
 
